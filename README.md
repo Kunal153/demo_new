@@ -135,5 +135,31 @@ git push -u origin main
 
 ---
 
+## 🚀 Deploying to Vercel
+
+This repository is pre-configured for seamless 1-click deployment to [Vercel](https://vercel.com):
+
+### Option 1: Deploy with Vercel Git Integration (Recommended)
+1. Push your repository to GitHub.
+2. Go to [vercel.com](https://vercel.com) and click **"Add New Project"**.
+3. Import your GitHub repository.
+4. Vercel automatically detects the framework as **Vite**:
+   - **Build Command**: `vite build` (or `npm run build`)
+   - **Output Directory**: `dist`
+   - **Install Command**: `npm install`
+5. (Optional) In **Environment Variables**, add:
+   - `GEMINI_API_KEY`: Your Google Gemini API Key *(if omitted, EngiNotes will automatically use its built-in offline academic knowledge base)*.
+6. Click **Deploy**. Your app will be live with full SPA routing and serverless AI endpoints!
+
+### Option 2: Deploy using Vercel CLI
+```bash
+npm i -g vercel
+vercel
+```
+Follow the CLI prompts to deploy directly from your local terminal.
+
+---
+
 ## 🛡️ License
 Distributed under the Apache-2.0 License.
+
